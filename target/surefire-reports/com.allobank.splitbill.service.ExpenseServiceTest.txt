@@ -1,0 +1,77 @@
+-------------------------------------------------------------------------------
+Test set: com.allobank.splitbill.service.ExpenseServiceTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.881 s <<< FAILURE! -- in com.allobank.splitbill.service.ExpenseServiceTest
+com.allobank.splitbill.service.ExpenseServiceTest.percentageSplitMustAddUpToOneHundred -- Time elapsed: 0.845 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <com.allobank.splitbill.exception.InvalidSplitException> but was: <java.lang.NullPointerException>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at com.allobank.splitbill.service.ExpenseServiceTest.percentageSplitMustAddUpToOneHundred(ExpenseServiceTest.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.UUID.equals(Object)" because the return value of "com.allobank.splitbill.model.Participant.getId()" is null
+	at com.allobank.splitbill.service.ExpenseService.lambda$findParticipant$0(ExpenseService.java:186)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:196)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1701)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:147)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:588)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:574)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:683)
+	at com.allobank.splitbill.service.ExpenseService.findParticipant(ExpenseService.java:187)
+	at com.allobank.splitbill.service.ExpenseService.addExpense(ExpenseService.java:42)
+	at com.allobank.splitbill.service.ExpenseServiceTest.lambda$percentageSplitMustAddUpToOneHundred$0(ExpenseServiceTest.java:104)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 6 more
+
+com.allobank.splitbill.service.ExpenseServiceTest.equalSplitOfAnAmountNotDivisibleByThreeReconcilesExactlyToTheCent -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.UUID.equals(Object)" because the return value of "com.allobank.splitbill.model.Participant.getId()" is null
+	at com.allobank.splitbill.service.ExpenseService.lambda$findParticipant$0(ExpenseService.java:186)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:196)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1701)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:147)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:588)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:574)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:683)
+	at com.allobank.splitbill.service.ExpenseService.findParticipant(ExpenseService.java:187)
+	at com.allobank.splitbill.service.ExpenseService.addExpense(ExpenseService.java:42)
+	at com.allobank.splitbill.service.ExpenseServiceTest.equalSplitOfAnAmountNotDivisibleByThreeReconcilesExactlyToTheCent(ExpenseServiceTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+com.allobank.splitbill.service.ExpenseServiceTest.exactSplitThatDoesNotSumToTotalIsRejected -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <com.allobank.splitbill.exception.InvalidSplitException> but was: <java.lang.NullPointerException>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at com.allobank.splitbill.service.ExpenseServiceTest.exactSplitThatDoesNotSumToTotalIsRejected(ExpenseServiceTest.java:89)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.UUID.equals(Object)" because the return value of "com.allobank.splitbill.model.Participant.getId()" is null
+	at com.allobank.splitbill.service.ExpenseService.lambda$findParticipant$0(ExpenseService.java:186)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:196)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1701)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:147)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:588)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:574)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:683)
+	at com.allobank.splitbill.service.ExpenseService.findParticipant(ExpenseService.java:187)
+	at com.allobank.splitbill.service.ExpenseService.addExpense(ExpenseService.java:42)
+	at com.allobank.splitbill.service.ExpenseServiceTest.lambda$exactSplitThatDoesNotSumToTotalIsRejected$0(ExpenseServiceTest.java:89)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 6 more
+

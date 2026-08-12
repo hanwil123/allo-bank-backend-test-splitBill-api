@@ -1,0 +1,11 @@
+package com.allobank.splitbill.repository;
+
+import com.allobank.splitbill.model.Payment;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+import java.util.UUID;
+
+public interface PaymentRepository extends JpaRepository<Payment, UUID> {
+    List<Payment> findByGroupId(UUID groupId);
+}

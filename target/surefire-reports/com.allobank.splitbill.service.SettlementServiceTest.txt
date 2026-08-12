@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: com.allobank.splitbill.service.SettlementServiceTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.083 s <<< FAILURE! -- in com.allobank.splitbill.service.SettlementServiceTest
+com.allobank.splitbill.service.SettlementServiceTest.equalSplitProducesCorrectBalancesAndMinimalTransactions -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.UUID.equals(Object)" because the return value of "com.allobank.splitbill.dto.SettlementResponse$BalanceDto.participantId()" is null
+	at com.allobank.splitbill.service.SettlementServiceTest.lambda$assertBalance$0(SettlementServiceTest.java:122)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:196)
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.tryAdvance(AbstractList.java:708)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:147)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:588)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:574)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:683)
+	at com.allobank.splitbill.service.SettlementServiceTest.assertBalance(SettlementServiceTest.java:123)
+	at com.allobank.splitbill.service.SettlementServiceTest.equalSplitProducesCorrectBalancesAndMinimalTransactions(SettlementServiceTest.java:64)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+com.allobank.splitbill.service.SettlementServiceTest.recordedPaymentsAreNettedIntoBalances -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.UUID.equals(Object)" because the return value of "com.allobank.splitbill.dto.SettlementResponse$BalanceDto.participantId()" is null
+	at com.allobank.splitbill.service.SettlementServiceTest.lambda$assertBalance$0(SettlementServiceTest.java:122)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:196)
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.tryAdvance(AbstractList.java:708)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:147)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:588)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:574)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:683)
+	at com.allobank.splitbill.service.SettlementServiceTest.assertBalance(SettlementServiceTest.java:123)
+	at com.allobank.splitbill.service.SettlementServiceTest.recordedPaymentsAreNettedIntoBalances(SettlementServiceTest.java:96)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
